@@ -124,6 +124,7 @@ var WebViewBridge = createReactClass({
         onLoadingStart={this.onLoadingStart}
         onLoadingFinish={this.onLoadingFinish}
         onLoadingError={this.onLoadingError}
+		messagingEnabled={true}
       />;
 
     return (
