@@ -51,6 +51,8 @@ var WebViewBridge = createReactClass({
 
   propTypes: {
     ...WebView.propTypes,
+	messagingEnabled: PropTypes.bool,
+	allowFileAccessFromFileURLs: PropTypes.bool,
 
     /**
      * Will be called once the message is being sent from webview
@@ -170,7 +172,7 @@ var WebViewBridge = createReactClass({
   injectBridgeScript: function () {
     UIManager.dispatchViewManagerCommand(
       this.getWebViewBridgeHandle(),
-      UIManager.RCTWebViewBridge.Commands.injectBridgeScript,
+      UIManager.RCTWebViewBridge.Commands.injectJavaScript,
       null
     );
   },
